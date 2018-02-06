@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:true,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:true,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;,&quot;GRID_TYPE&quot;:&quot;RegularGrid,26&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-absolute-layout>
+   <vaadin-label id="1" plain-text :top="0px" :left="0px">
+     Optical Character Recognition (OCR): 
+   </vaadin-label>
+   <vaadin-label id="2" plain-text :top="35px" :left="0px">
+     Enter the URL or location to an image of printed text, then click the "Read Image" button. 
+   </vaadin-label>
+   <vaadin-label plain-text :top="80px" :left="13px">
+     Image to Read 
+   </vaadin-label>
+   <vaadin-text-field width="260px" height="26px" _id="textFieldURL" :top="78px" :left="130px"></vaadin-text-field>
+   <vaadin-native-button height="30px" plain-text _id="readImage" :top="74px" :left="405px">
+     Read Image 
+   </vaadin-native-button>
+   <vaadin-label plain-text :top="132px" :left="13px">
+     Response 
+   </vaadin-label>
+   <vaadin-text-area width="364px" height="260px" _id="responseTextArea" :top="182px" :left="26px"></vaadin-text-area>
+   <vaadin-image width="286px" height="260px" _id="image" :top="182px" :left="416px"></vaadin-image>
+   <vaadin-label plain-text :top="156px" :left="444px">
+     Source Image 
+   </vaadin-label>
+   <vaadin-label plain-text :top="468px" :left="26px">
+     Subscription Key 
+   </vaadin-label>
+   <vaadin-password-field placeholder="" _id="subscriptionPasswordField" :top="468px" :left="179px"></vaadin-password-field>
+   <vaadin-label plain-text :top="522px" :left="26px">
+     Subscription Region 
+   </vaadin-label>
+   <vaadin-native-select data-item-type="java.lang.String" _id="selectRegion" :top="519px" :left="182px">
+    <option item="West Europe">westeurope</option>
+    <option item="Something Else">Option 2</option>
+    <option item="Central America">centralus</option>
+   </vaadin-native-select>
+   <vaadin-upload style-name="borderless" height="30px" _id="uploadImage" :top="74px" :left="520px"></vaadin-upload>
+   <vaadin-label width="156px" height="26px" plain-text :top="52px" :left="676px">
+     Language Selector 
+   </vaadin-label>
+   <vaadin-combo-box empty-selection-allowed="false" responsive data-item-type="java.lang.String" _id="languageSelectorComboBox" :top="78px" :left="673px">
+    <option item="Romana">ro</option>
+    <option item="Auto">unk</option>
+   </vaadin-combo-box>
+   <vaadin-combo-box empty-selection-allowed="false" responsive data-item-type="java.lang.String" readonly _id="inputFileChooser" :top="130px" :left="673px">
+    <option item="Open File">application/octet-stream</option>
+    <option item="Open URL">application/json</option>
+   </vaadin-combo-box>
+  </vaadin-absolute-layout>
+ </body>
+</html>
